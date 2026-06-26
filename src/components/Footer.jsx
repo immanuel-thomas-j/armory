@@ -19,9 +19,9 @@ export default function Footer() {
             <p style={styles.subText}>Weekly insights on automation, AI workflows, and real builds. No fluff, just what works.</p>
           </div>
           <form style={styles.form} onSubmit={(e) => e.preventDefault()}>
-            <div style={styles.inputWrapper}>
-              <input type="email" placeholder="jane@framer.com" style={styles.input} required />
-              <button type="submit" style={styles.subscribeBtn}>
+            <div className="footer-input-wrapper" style={styles.inputWrapper}>
+              <input className="footer-input" type="email" placeholder="jane@framer.com" style={styles.input} required />
+              <button className="footer-submit-btn" type="submit" style={styles.subscribeBtn}>
                 <img src="/assets/svgs/arrow-path.svg" alt="Subscribe" style={styles.btnIcon} />
                 Subscribe
               </button>
@@ -60,26 +60,16 @@ export default function Footer() {
               <span style={styles.linkDisabled}>Privacy Policy</span>
               <div style={styles.socials}>
                 <a href="#" style={styles.socialIcon} aria-label="Twitter">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{display: 'block'}}>
-                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
-                  </svg>
+                  <img src="/assets/svgs/link.svg" alt="Twitter" style={{width: '14px', height: '14px', filter: 'invert(1)'}} />
                 </a>
                 <a href="#" style={styles.socialIcon} aria-label="LinkedIn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{display: 'block'}}>
-                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
-                  </svg>
+                  <img src="/assets/svgs/link-solid.svg" alt="LinkedIn" style={{width: '14px', height: '14px', filter: 'invert(1)'}} />
                 </a>
                 <a href="#" style={styles.socialIcon} aria-label="YouTube">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style={{display: 'block'}}>
-                    <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.525 3.545 12 3.545 12 3.545s-7.525 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.026 0 12 0 12s0 3.974.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.863.508 9.388.508 9.388.508s7.525 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.974 24 12 24 12s0-3.974-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-                  </svg>
+                  <img src="/assets/svgs/link.svg" alt="YouTube" style={{width: '14px', height: '14px', filter: 'invert(1)'}} />
                 </a>
                 <a href="#" style={styles.socialIcon} aria-label="Instagram">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                  </svg>
+                  <img src="/assets/svgs/link-solid.svg" alt="Instagram" style={{width: '14px', height: '14px', filter: 'invert(1)'}} />
                 </a>
               </div>
             </div>
@@ -187,7 +177,6 @@ const styles = {
   btnIcon: {
     width: '14px',
     height: '14px',
-    filter: 'invert(1)',
   },
   midSection: {
     display: 'flex',
@@ -267,7 +256,7 @@ const styles = {
     color: 'var(--color-arctic-powder)',
     display: 'flex',
     alignItems: 'center',
-    justifycontent: 'center',
+    justifyContent: 'center',
     textDecoration: 'none',
     fontSize: '14px',
     fontWeight: '500',

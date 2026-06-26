@@ -4,9 +4,17 @@ export default function Testimonials() {
   const renderStars = () => (
     <div style={{ display: 'flex', gap: '3px', marginBottom: '20px' }}>
       {[...Array(5)].map((_, i) => (
-        <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="var(--color-oceanic-noir)" stroke="none" style={{display: 'block'}}>
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-        </svg>
+        <img 
+          key={i} 
+          src="/assets/svgs/cube-16-solid.svg" 
+          alt="Star" 
+          style={{
+            width: '12px', 
+            height: '12px', 
+            display: 'block',
+            filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'
+          }} 
+        />
       ))}
     </div>
   );

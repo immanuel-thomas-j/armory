@@ -5,49 +5,38 @@ export default function CaseStudies() {
     {
       logo: (
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--color-nocturnal-expedition)">
-            <path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9Z"/>
-          </svg>
+          <img src="/assets/svgs/cog-8-tooth.svg" alt="cigna" style={{ width: '18px', height: '18px' }} />
           <span style={{ textTransform: 'lowercase' }}>cigna</span>
         </span>
       ),
+      logoClass: 'cigna-logo',
       year: '//2026',
       title: 'Cigna Smart Health Systems',
-      desc: 'Revolutionizing patient care through predictive analytics and seamless AI-driven diagnostic integration tools.',
-      bgStyle: { backgroundColor: 'var(--color-arctic-powder)' }
+      desc: 'Revolutionizing patient care through predictive analytics and seamless AI-driven diagnostic integration tools.'
     },
     {
       logo: (
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <circle cx="12" cy="12" r="9"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
+          <img src="/assets/svgs/link-solid.svg" alt="aetna" style={{ width: '18px', height: '18px' }} />
           <span style={{ textTransform: 'lowercase' }}>aetna</span>
         </span>
       ),
+      logoClass: 'aetna-logo',
       year: '//2026',
       title: 'Aetna Health Data Ecosystem',
-      desc: "We automated Aetna's member data management using secure AI to provide personalized care and clinical insights.",
-      bgStyle: { 
-        backgroundImage: 'linear-gradient(to right, var(--color-oceanic-noir), var(--color-nocturnal-expedition))', 
-        color: 'var(--color-arctic-powder)',
-        borderRadius: '4px'
-      }
+      desc: "We automated Aetna's member data management using secure AI to provide personalized care and clinical insights."
     },
     {
       logo: (
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="var(--color-deep-saffron)">
-            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-          </svg>
+          <img src="/assets/svgs/cube-16-solid.svg" alt="Anthem" style={{ width: '18px', height: '18px' }} />
           <span>Anthem</span>
         </span>
       ),
+      logoClass: 'anthem-logo',
       year: '//2026',
       title: 'Anthem Neural Care Network',
-      desc: "We deployed a custom LLM to automate Anthem's provider relations, reducing ticket latency by eighty-five percent.",
-      bgStyle: { backgroundColor: 'var(--color-arctic-powder)' }
+      desc: "We deployed a custom LLM to automate Anthem's provider relations, reducing ticket latency by eighty-five percent."
     }
   ];
 
@@ -64,29 +53,29 @@ export default function CaseStudies() {
         </div>
 
         {/* Projects Table List */}
-        <div style={styles.table}>
+        <div className="case-study-table">
           {projects.map((project, idx) => (
-            <div key={idx} style={styles.row} className="case-study-row">
+            <div key={idx} className="case-study-row">
               {/* Logo Column */}
-              <div style={styles.logoCol}>
-                <div style={{...styles.logoWrapper, ...project.bgStyle}}>
+              <div className="case-study-logo-cell">
+                <div className={`case-study-logo-wrapper ${project.logoClass}`}>
                   {project.logo}
                 </div>
               </div>
 
               {/* Year Column */}
-              <div style={styles.yearCol}>
-                <span style={styles.year}>{project.year}</span>
+              <div className="case-study-cell" style={{ color: 'var(--text-muted-dark)', fontFamily: 'var(--font-mono)', fontSize: '13px' }}>
+                <span>{project.year}</span>
               </div>
 
               {/* Content Column */}
-              <div style={styles.contentCol}>
+              <div className="case-study-cell" style={{ flexDirection: 'column', alignItems: 'flex-start', gap: '8px' }}>
                 <h3 style={styles.projectTitle}>{project.title}</h3>
                 <p style={styles.projectDesc}>{project.desc}</p>
               </div>
 
               {/* Link Column */}
-              <div style={styles.linkCol}>
+              <div className="case-study-cell case-study-chevron-cell">
                 <div style={styles.arrowIcon}>
                   <img src="/assets/svgs/chevron-right.svg" alt="Details" style={styles.chevron} />
                   <img src="/assets/svgs/chevron-right.svg" alt="Details" style={{...styles.chevron, marginLeft: '-4px'}} />
@@ -98,22 +87,12 @@ export default function CaseStudies() {
 
         {/* More Projects Button */}
         <div style={styles.actionRow}>
-          <button style={styles.moreBtn}>
+          <button style={styles.moreBtn} className="btn-more-projects">
             <img src="/assets/svgs/cog-8-tooth.svg" alt="More" style={styles.moreIcon} />
             More Projects
           </button>
         </div>
       </div>
-
-      {/* Adding inline CSS for row hover effects since it's a light-themed section with custom styling */}
-      <style dangerouslySetInnerHTML={{__html: `
-        .case-study-row {
-          transition: background-color var(--transition-fast);
-        }
-        .case-study-row:hover {
-          background-color: rgba(23, 43, 54, 0.03);
-        }
-      `}} />
     </section>
   );
 }

@@ -1,25 +1,15 @@
 import React from 'react';
 import ThreeBackground from './ThreeBackground';
+import heroPng from '../assets/hero.png';
 
 export default function Hero() {
-  const clientLogos = [
-    { name: 'aetna', color: 'var(--color-deep-saffron)' },
-    { name: 'cigna', color: 'var(--color-forsythia)' },
-    { name: 'Anthem', color: 'var(--color-mystic-mint)' },
-    { name: 'CVS pharmacy', color: 'var(--color-deep-saffron)' },
-    { name: 'Vertex Labs', color: 'var(--color-forsythia)' },
-    { name: 'FlowState AI', color: 'var(--color-mystic-mint)' },
-    { name: 'Neural Sync', color: 'var(--color-forsythia)' },
-    { name: 'Sentinel Ops', color: 'var(--color-deep-saffron)' }
-  ];
-
-  // Duplicate the logos array to ensure a seamless infinite scroll loop
-  const marqueeLogos = [...clientLogos, ...clientLogos, ...clientLogos];
-
   return (
     <section id="hero" style={styles.heroSection}>
       {/* 3D WebGL Constellation backdrop */}
       <ThreeBackground />
+
+      {/* 3D Grid Image Backdrop Overlay */}
+      <div style={styles.heroPngBg}></div>
 
       {/* Background Glow Halo */}
       <div style={styles.glowSpot}></div>
@@ -31,62 +21,98 @@ export default function Hero() {
         <div className="hero-grid-layout">
           {/* Left Column - Content */}
           <div style={styles.contentCol}>
-            <div className="badge animate-fade-in-up" style={{ color: 'var(--color-forsythia)', borderColor: 'rgba(255, 200, 1, 0.3)' }}>
-              // NEXT-GEN AI AUTOMATION
+            <div className="hero-badge animate-fade-in-up" style={styles.heroBadge}>
+              <span style={styles.badgeDot}></span>
+              <span>\\\\\\ OPERATIONAL NEURAL RUNTIME</span>
             </div>
-            <h1 className="text-gradient-mint hero-title animate-fade-in-up delay-1">
-              Power your <br />
-              <span className="text-gradient-gold">future</span> with AI
+            <h1 className="hero-title animate-fade-in-up delay-1">
+              Autonomous AI <br />
+              <span className="text-gradient-gold">Orchestration</span> <br />
+              for Enterprise
             </h1>
             <p style={styles.subtitle} className="animate-fade-in-up delay-2">
-              Deploy custom enterprise agents and automate complex workflows.
-              Scale your intelligence with Armory today.
+              Orchestrate complex business logic, securely connect vector datastores, and deploy autonomous stateful agents in milliseconds. Zero external dependencies.
             </p>
             <div style={styles.ctaGroup} className="animate-fade-in-up delay-3">
-              <a href="#pricing" style={styles.primaryBtn} className="btn btn-primary">
-                <img src="/assets/svgs/cube-16-solid.svg" alt="Build" style={styles.btnIcon} />
-                Build A Workflow
+              {/* Custom Split-Block CTA Button */}
+              <a href="#pricing" className="btn-split">
+                <div className="btn-split-icon-wrapper">
+                  <img src="/assets/svgs/cube-16-solid.svg" alt="Build" className="btn-split-icon" style={{ filter: 'invert(1)' }} />
+                </div>
+                <div className="btn-split-text-wrapper">
+                  <span>Build A Workflow</span>
+                </div>
               </a>
-              <a href="#solutions" style={styles.secondaryBtn} className="btn btn-secondary">
+              <a href="#solutions" className="btn-hero-outline">
                 Explore Solutions
               </a>
             </div>
           </div>
 
-          {/* Right Column - Terminal Console */}
-          <div className="hero-feature-col animate-fade-in-up delay-4">
-            <div className="card-premium" style={styles.terminalCard}>
-              <div style={styles.terminalHeader}>
-                <div style={styles.windowControls}>
-                  <span style={{...styles.windowDot, backgroundColor: 'var(--color-deep-saffron)'}}></span>
-                  <span style={{...styles.windowDot, backgroundColor: 'var(--color-forsythia)'}}></span>
-                  <span style={{...styles.windowDot, backgroundColor: 'var(--color-mystic-mint)'}}></span>
-                </div>
-                <div style={styles.terminalTitle}>armory_orchestrator.sh</div>
-              </div>
-              <div style={styles.terminalBody}>
-                <div style={styles.logLine}><span style={{color: 'var(--color-forsythia)'}}>[BOOT]</span> loading core model engine v4.2...</div>
-                <div style={styles.logLine}><span style={{color: 'var(--color-mystic-mint)'}}>[OK]</span> active clusters secure on port 8080</div>
-                <div style={styles.logLine}><span style={{color: 'var(--color-deep-saffron)'}}>[SYNC]</span> cataloging enterprise resources...</div>
-                <div style={styles.logLine}><span style={{color: 'var(--color-forsythia)'}}>[OK]</span> 14 data endpoints indexed (200ms)</div>
-                <div style={styles.logLine}><span style={{color: 'var(--color-arctic-powder)', opacity: 0.5}}>&gt; armory --deploy --env=production</span></div>
-                <div style={{...styles.logLine, ...styles.activeLine}}><span style={{color: 'var(--color-forsythia)'}}>[LIVE]</span> monitoring accuracy: 99.98%</div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Client Logos Carousel */}
-        <div style={styles.logoSection}>
-          <p style={styles.logoTitle}>TRUSTED BY WORLD-CLASS ENTERPRISES</p>
-          <div className="marquee-container" style={styles.marqueeContainer}>
-            <div className="marquee-content" style={styles.marqueeContent}>
-              {marqueeLogos.map((logo, idx) => (
-                <div key={idx} style={styles.logoCard}>
-                  <span style={{...styles.logoDot, backgroundColor: logo.color}}></span>
-                  <span style={styles.logoName}>{logo.name}</span>
+          {/* Right Column - Vertical Status Cards & Logos */}
+          <div className="hero-feature-col animate-fade-in-up delay-4" style={styles.rightCol}>
+            <div style={styles.cardsStack}>
+              {[
+                {
+                  title: 'Agent Engine Runtime',
+                  desc: 'Stateful execution paths with auto-retry.',
+                  icon: '/assets/svgs/cube-16-solid.svg',
+                  badge: 'ACTIVE'
+                },
+                {
+                  title: 'Private Cluster Mesh',
+                  desc: 'End-to-end telemetry and isolated network nodes.',
+                  icon: '/assets/svgs/cog-8-tooth.svg',
+                  badge: 'SECURE'
+                },
+                {
+                  title: 'Multi-Vector Sync',
+                  desc: 'Context injection across distributed datastores.',
+                  icon: '/assets/svgs/arrow-path.svg',
+                  badge: 'SYNCED'
+                },
+                {
+                  title: 'Performance Telemetry',
+                  desc: 'Sub-millisecond latencies for model endpoints.',
+                  icon: '/assets/svgs/arrow-trending-up.svg',
+                  badge: '99.9% UPTIME'
+                }
+              ].map((card, idx) => (
+                <div key={idx} className="hero-tech-card">
+                  <div className="hero-card-icon-box">
+                    <img src={card.icon} alt={card.title} className="hero-card-icon" />
+                  </div>
+                  <div style={styles.cardInfo}>
+                    <div style={styles.cardHeaderRow}>
+                      <h3 className="hero-card-title">{card.title}</h3>
+                      <span className="hero-card-badge">{card.badge}</span>
+                    </div>
+                    <p className="hero-card-desc">{card.desc}</p>
+                  </div>
                 </div>
               ))}
+            </div>
+
+            {/* Horizontal row of client logos */}
+            <div style={styles.logoRow}>
+              <div style={styles.logoRowTitle}>TRUSTED BY LEADING TEAMS</div>
+              <div style={styles.logoContainer}>
+                {/* aetna */}
+                <div style={styles.logoItem}>
+                  <img src="/assets/svgs/link-solid.svg" alt="aetna" style={{ width: '16px', height: '16px', filter: 'invert(1)' }} />
+                  <span style={styles.logoText}>aetna</span>
+                </div>
+                {/* cigna */}
+                <div style={styles.logoItem}>
+                  <img src="/assets/svgs/cog-8-tooth.svg" alt="cigna" style={{ width: '16px', height: '16px', filter: 'invert(1)' }} />
+                  <span style={styles.logoText}>cigna</span>
+                </div>
+                {/* Anthem */}
+                <div style={styles.logoItem}>
+                  <img src="/assets/svgs/cube-16-solid.svg" alt="Anthem" style={{ width: '16px', height: '16px', filter: 'invert(1)' }} />
+                  <span style={styles.logoText}>Anthem</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -100,9 +126,24 @@ const styles = {
     position: 'relative',
     backgroundColor: 'var(--bg-dark)',
     paddingTop: '160px',
-    paddingBottom: '80px',
+    paddingBottom: '100px',
     overflow: 'hidden',
     borderBottom: '1px solid rgba(241, 246, 244, 0.05)',
+  },
+  heroPngBg: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: '100%',
+    height: '100%',
+    backgroundImage: `url(${heroPng})`,
+    opacity: 0.55,
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
+    zIndex: 1,
+    pointerEvents: 'none',
   },
   gridBg: {
     position: 'absolute',
@@ -120,25 +161,32 @@ const styles = {
     position: 'relative',
     zIndex: 2,
   },
-  heroGrid: {
-    display: 'grid',
-    gridTemplateColumns: '1.2fr 0.8fr',
-    gap: '64px',
-    alignItems: 'center',
-    marginBottom: '80px',
-  },
   contentCol: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
   },
-  title: {
-    fontSize: '64px',
-    lineHeight: '1.1',
-    color: 'var(--color-arctic-powder)',
-    marginBottom: '24px',
-    fontWeight: '800',
-    letterSpacing: '-0.03em',
+  heroBadge: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    gap: '8px',
+    padding: '6px 14px',
+    borderRadius: '100px',
+    backgroundColor: 'rgba(255, 200, 1, 0.08)',
+    border: '1px solid rgba(255, 200, 1, 0.2)',
+    color: 'var(--color-forsythia)',
+    fontFamily: 'var(--font-mono)',
+    fontSize: '11px',
+    fontWeight: '700',
+    letterSpacing: '0.1em',
+    marginBottom: '28px',
+  },
+  badgeDot: {
+    width: '6px',
+    height: '6px',
+    borderRadius: '50%',
+    backgroundColor: 'var(--color-forsythia)',
+    boxShadow: '0 0 8px var(--color-forsythia)',
   },
   subtitle: {
     fontSize: '18px',
@@ -146,26 +194,13 @@ const styles = {
     color: 'var(--text-muted)',
     marginBottom: '40px',
     maxWidth: '540px',
+    textAlign: 'left',
   },
   ctaGroup: {
     display: 'flex',
     gap: '16px',
+    alignItems: 'center',
     flexWrap: 'wrap',
-  },
-  primaryBtn: {
-    fontFamily: 'var(--font-sans)',
-    fontWeight: '600',
-    padding: '16px 32px',
-    borderRadius: '100px',
-  },
-  btnIcon: {
-    width: '18px',
-    height: '18px',
-  },
-  secondaryBtn: {
-    padding: '16px 32px',
-    borderRadius: '100px',
-    fontWeight: '600',
   },
   glowSpot: {
     position: 'absolute',
@@ -178,104 +213,61 @@ const styles = {
     zIndex: 1,
     pointerEvents: 'none',
   },
-  featureCol: {
-    display: 'flex',
-    justifyContent: 'flex-end',
-    zIndex: 2,
-  },
-  terminalCard: {
-    width: '100%',
-    maxWidth: '420px',
-    backgroundColor: 'rgba(23, 43, 54, 0.85)',
-    border: '1px solid rgba(241, 246, 244, 0.1)',
-    borderRadius: '8px',
-    overflow: 'hidden',
-    boxShadow: '0 20px 40px rgba(0,0,0,0.4)',
-    textAlign: 'left',
-  },
-  terminalHeader: {
-    backgroundColor: 'rgba(241, 246, 244, 0.03)',
-    borderBottom: '1px solid rgba(241, 246, 244, 0.08)',
-    padding: '12px 20px',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-  },
-  windowControls: {
-    display: 'flex',
-    gap: '6px',
-  },
-  windowDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    display: 'inline-block',
-  },
-  terminalTitle: {
-    fontFamily: 'var(--font-mono)',
-    fontSize: '11px',
-    color: 'var(--text-muted)',
-    flexGrow: 1,
-    textAlign: 'center',
-    marginRight: '24px',
-  },
-  terminalBody: {
-    padding: '24px',
-    fontFamily: 'var(--font-mono)',
-    fontSize: '12px',
-    lineHeight: '1.7',
+  rightCol: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '12px',
+    gap: '40px',
+    alignItems: 'flex-start',
+    width: '100%',
+    zIndex: 2,
   },
-  logLine: {
-    color: 'var(--color-arctic-powder)',
-    wordBreak: 'break-all',
+  cardsStack: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '16px',
+    width: '100%',
   },
-  activeLine: {
-    borderLeft: '2px solid var(--color-forsythia)',
-    paddingLeft: '8px',
+  cardInfo: {
+    flexGrow: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    textAlign: 'left',
   },
-  logoSection: {
-    borderTop: '1px solid rgba(241, 246, 244, 0.05)',
-    paddingTop: '40px',
+  cardHeaderRow: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    width: '100%',
   },
-  logoTitle: {
+  logoRow: {
+    width: '100%',
+    paddingTop: '8px',
+  },
+  logoRowTitle: {
     fontFamily: 'var(--font-mono)',
     fontSize: '11px',
     color: 'rgba(241, 246, 244, 0.4)',
-    letterSpacing: '0.25em',
-    marginBottom: '28px',
-    textAlign: 'center',
+    letterSpacing: '0.15em',
+    marginBottom: '16px',
+    textTransform: 'uppercase',
+    textAlign: 'left',
   },
-  marqueeContainer: {
-    width: '100%',
+  logoContainer: {
+    display: 'flex',
+    gap: '32px',
+    alignItems: 'center',
+    flexWrap: 'wrap',
   },
-  marqueeContent: {
+  logoItem: {
     display: 'flex',
     alignItems: 'center',
+    gap: '8px',
   },
-  logoCard: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '10px',
-    padding: '12px 24px',
-    background: 'rgba(35, 62, 77, 0.15)',
-    border: '1px solid rgba(241, 246, 244, 0.05)',
-    borderRadius: '4px',
-    minWidth: '180px',
-  },
-  logoDot: {
-    width: '8px',
-    height: '8px',
-    borderRadius: '50%',
-    display: 'inline-block',
-  },
-  logoName: {
+  logoText: {
     fontFamily: 'var(--font-sans)',
     fontWeight: '700',
     fontSize: '15px',
     color: 'rgba(241, 246, 244, 0.8)',
-    letterSpacing: '-0.02em',
   }
 };

@@ -7,64 +7,32 @@ export default function FAQ() {
     {
       q: 'What is the Armory platform?',
       a: 'Armory is a specialized infrastructure for building and deploying custom AI agents. We provide the neural logic and edge nodes required to run autonomous workflows at enterprise scale.',
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-          <line x1="12" y1="22.08" x2="12" y2="12"></line>
-        </svg>
-      )
+      icon: '/assets/svgs/cube-16-solid.svg'
     },
     {
       q: 'Who is this template designed for?',
       a: 'This platform is engineered for developer teams, product architects, and operations managers looking to deploy secure, autonomous workflows integrated with primary SaaS tools and database clusters.',
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-          <circle cx="12" cy="7" r="4"></circle>
-        </svg>
-      )
+      icon: '/assets/svgs/cog-8-tooth.svg'
     },
     {
       q: 'Does Armory provide pre-built agents?',
       a: 'Yes, we provide several boilerplate nodes and agent templates for common automation scenarios, including email auto-responders, DB sync schedulers, and customer support triage systems.',
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-          <path d="M12 2v4M8 5h8"></path>
-          <circle cx="8" cy="16" r="1"></circle>
-          <circle cx="16" cy="16" r="1"></circle>
-        </svg>
-      )
+      icon: '/assets/svgs/arrow-path.svg'
     },
     {
       q: 'How does it differ from a standard chatbot?',
       a: 'Unlike static chatbots, Armory agents operate autonomously. They can evaluate conditional branching, run custom Javascript modules, interface with vector databases, and trigger external API actions without human input.',
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
-      )
+      icon: '/assets/svgs/arrow-trending-up.svg'
     },
     {
       q: 'Can I use my own custom domain?',
       a: 'Absolutely. All deployed agent endpoints and triggers can be mapped to your own custom domains with automatically provisioned SSL certificates.',
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <circle cx="12" cy="12" r="10"></circle>
-          <line x1="2" y1="12" x2="22" y2="12"></line>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-        </svg>
-      )
+      icon: '/assets/svgs/link-solid.svg'
     },
     {
       q: 'Is there a limit to how many agents I can build?',
       a: 'Our Pro plan includes up to 5 active agent workflows running concurrently. For higher limits or custom private clusters, please refer to our Enterprise tier.',
-      icon: (
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <path d="M12 12a5 5 0 1 1 5 5 5 5 0 0 1-5-5zm0 0a5 5 0 1 0-5 5 5 5 0 0 0 5-5z"></path>
-        </svg>
-      )
+      icon: '/assets/svgs/chart-pie.svg'
     }
   ];
 
@@ -82,7 +50,7 @@ export default function FAQ() {
           <p style={styles.subtitle}>
             Everything you need to know about deploying, scaling, and securing your neural agents with Armory. Can't find an answer?
           </p>
-          <a href="#pricing" style={styles.contactBtn}>
+          <a href="#pricing" style={styles.contactBtn} className="btn-contact-us">
             <img src="/assets/svgs/cog-8-tooth.svg" alt="Contact" style={styles.contactIcon} />
             Contact Us
           </a>
@@ -103,7 +71,9 @@ export default function FAQ() {
                   style={styles.header}
                 >
                   <div style={styles.headerTextGroup}>
-                    <span style={styles.faqIcon}>{item.icon}</span>
+                    <span style={styles.faqIcon}>
+                      <img src={item.icon} alt="Icon" style={{width: '18px', height: '18px', display: 'block', filter: 'invert(1)'}} />
+                    </span>
                     <span style={styles.questionText}>{item.q}</span>
                   </div>
                   <span className="faq-accordion-icon" style={styles.accordionIcon}>
@@ -115,7 +85,7 @@ export default function FAQ() {
                 <div 
                   className="faq-accordion-content"
                   style={{
-                    maxHeight: activeIdx === idx ? '200px' : '0',
+                    maxHeight: activeIdx === idx ? '400px' : '0',
                     opacity: activeIdx === idx ? 1 : 0
                   }}
                 >
@@ -210,7 +180,14 @@ const styles = {
     gap: '16px',
   },
   faqIcon: {
-    fontSize: '16px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '32px',
+    height: '32px',
+    borderRadius: '6px',
+    backgroundColor: 'var(--color-oceanic-noir)',
+    flexShrink: 0,
   },
   questionText: {
     fontWeight: '600',

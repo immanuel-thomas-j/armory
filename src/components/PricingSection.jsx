@@ -1,9 +1,18 @@
 import React, { useRef, useEffect } from 'react';
 
 const CheckIcon = () => (
-  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '8px', display: 'inline-block', verticalAlign: 'middle'}}>
-    <polyline points="20 6 9 17 4 12"></polyline>
-  </svg>
+  <img 
+    src="/assets/svgs/cube-16-solid.svg" 
+    alt="Bullet" 
+    style={{
+      width: '10px', 
+      height: '10px', 
+      marginRight: '8px', 
+      display: 'inline-block', 
+      verticalAlign: 'middle', 
+      filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'
+    }} 
+  />
 );
 
 export default function PricingSection() {
@@ -311,7 +320,7 @@ const styles = {
   },
   toggleGroup: {
     display: 'flex',
-    backgroundColor: 'rgba(35, 62, 77, 0.4)',
+    backgroundColor: 'rgba(17, 76, 90, 0.4)',
     border: '1px solid rgba(241, 246, 244, 0.08)',
     borderRadius: '100px',
     padding: '4px',
@@ -344,7 +353,7 @@ const styles = {
     position: 'relative',
   },
   dropdownBtn: {
-    background: 'rgba(35, 62, 77, 0.4)',
+    background: 'rgba(17, 76, 90, 0.4)',
     border: '1px solid rgba(241, 246, 244, 0.08)',
     color: 'var(--color-arctic-powder)',
     padding: '10px 20px',
@@ -384,12 +393,10 @@ const styles = {
     color: 'var(--color-arctic-powder)',
   },
   grid: {
-    display: 'grid',
-    gridTemplateColumns: 'repeat(3, 1fr)',
-    gap: '32px',
+    /* gridTemplateColumns handled by .pricing-grid CSS class with responsive breakpoints */
   },
   card: {
-    background: 'rgba(35, 62, 77, 0.2)',
+    background: 'rgba(17, 76, 90, 0.2)',
     border: '1px solid rgba(241, 246, 244, 0.07)',
     borderRadius: '8px',
     padding: '40px',
@@ -398,7 +405,7 @@ const styles = {
     textAlign: 'left',
   },
   cardPremium: {
-    background: 'rgba(35, 62, 77, 0.35)',
+    background: 'rgba(17, 76, 90, 0.35)',
     border: '2px solid var(--color-forsythia)',
     borderRadius: '8px',
     padding: '40px',

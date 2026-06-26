@@ -43,19 +43,31 @@ export default function VideoPlayer() {
               <div style={styles.overlayContent}>
                 {/* Watch Time Badge */}
                 <div style={styles.watchTimeBadge}>
-                  <img src="/assets/svgs/chevron-right.svg" alt="Play Icon" style={styles.watchIcon} />
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-arctic-powder)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '2px', display: 'block'}}>
+                    <circle cx="12" cy="12" r="10" />
+                    <polyline points="12 6 12 12 16 14" />
+                  </svg>
                   <span style={styles.watchText}>2 Minutes Watch</span>
                 </div>
 
                 {/* Massive Branded Play Button */}
                 <div style={styles.playLogoContainer}>
-                  <img src="/assets/svgs/cube-16-solid.svg" alt="Play Brand" style={styles.playLogo} />
+                  <svg width="44" height="44" viewBox="0 0 24 24" fill="none" style={{ color: 'var(--color-arctic-powder)', display: 'block' }}>
+                    <path d="M8 5L2 12L8 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M15 5L9 12L15 19" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </div>
 
-                {/* Interactive Play Button */}
-                <button style={styles.playBtn} onClick={handlePlayClick}>
-                  PLAY VIDEO
-                </button>
+                {/* Interactive Play Button with Crop Brackets */}
+                <div style={styles.playBtnContainer} className="play-btn-bracket-container">
+                  <span className="bracket-tl"></span>
+                  <span className="bracket-tr"></span>
+                  <span className="bracket-bl"></span>
+                  <span className="bracket-br"></span>
+                  <button style={styles.playBtn} onClick={handlePlayClick}>
+                    PLAY VIDEO
+                  </button>
+                </div>
               </div>
             </div>
           )}
@@ -167,18 +179,20 @@ const styles = {
     height: '40px',
     filter: 'invert(98%) sepia(4%) saturate(366%) hue-rotate(99deg) brightness(107%) contrast(93%)',
   },
+  playBtnContainer: {
+    position: 'relative',
+    padding: '2px',
+  },
   playBtn: {
     fontFamily: 'var(--font-mono)',
     fontSize: '12px',
     letterSpacing: '0.15em',
     fontWeight: '600',
-    backgroundColor: 'var(--color-arctic-powder)',
-    color: 'var(--color-oceanic-noir)',
-    border: '1px solid var(--color-arctic-powder)',
-    padding: '12px 32px',
-    borderRadius: '4px',
+    backgroundColor: 'transparent',
+    color: 'var(--color-arctic-powder)',
+    border: 'none',
+    padding: '14px 36px',
     cursor: 'pointer',
-    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
-    transition: 'transform 0.2s ease, background-color 0.2s ease, color 0.2s ease',
+    outline: 'none',
   }
 };

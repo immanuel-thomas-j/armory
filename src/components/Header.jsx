@@ -24,20 +24,23 @@ export default function Header() {
             <span style={styles.logoText}>armory</span>
           </div>
 
-          {/* Desktop Nav Links */}
-          <nav className="desktop-nav-links" style={styles.desktopNav}>
+          {/* Desktop Navigation Links */}
+          <nav className="desktop-nav" style={styles.desktopNav}>
+            <button style={styles.desktopNavLink} onClick={() => scrollToSection('hero')}>Home</button>
             <button style={styles.desktopNavLink} onClick={() => scrollToSection('solutions')}>Solutions</button>
-            <button style={styles.desktopNavLink} onClick={() => scrollToSection('stats')}>Telemetry</button>
-            <button style={styles.desktopNavLink} onClick={() => scrollToSection('features')}>Features</button>
+            <button style={styles.desktopNavLink} onClick={() => scrollToSection('stats')}>Product Stats</button>
+            <button style={styles.desktopNavLink} onClick={() => scrollToSection('features')}>Product Features</button>
+            <button style={styles.desktopNavLink} onClick={() => scrollToSection('testimonials')}>Testimonials</button>
             <button style={styles.desktopNavLink} onClick={() => scrollToSection('pricing')}>Pricing</button>
             <button style={styles.desktopNavLink} onClick={() => scrollToSection('faq')}>FAQ</button>
           </nav>
 
           {/* Desktop CTA Button */}
-          <div className="desktop-cta-wrapper" style={styles.desktopCtaWrapper}>
+          <div className="desktop-cta" style={styles.desktopCtaWrapper}>
             <button style={styles.desktopCtaBtn} onClick={() => scrollToSection('pricing')}>Get Started</button>
           </div>
 
+          {/* Hamburger Menu Toggle for smaller viewports */}
           <button className="mobile-menu-btn" style={styles.menuBtn} onClick={toggleMenu} aria-label="Toggle Menu">
             <span style={styles.menuLine}></span>
             <span style={{...styles.menuLine, width: '16px'}}></span>
@@ -46,7 +49,7 @@ export default function Header() {
       </header>
 
       {/* Full screen drawer menu */}
-      <div style={{...styles.drawer, transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)'}}>
+      <div className="mobile-drawer" style={{...styles.drawer, transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)'}}>
         <div style={styles.drawerHeader}>
           <div style={styles.logo}>
             <img src="/assets/svgs/cube-16-solid.svg" alt="Armory Logo" style={styles.logoIcon} />
@@ -71,7 +74,7 @@ export default function Header() {
           <button style={styles.ctaBtn} onClick={() => scrollToSection('pricing')}>Get Started</button>
         </div>
       </div>
-      {isMenuOpen && <div style={styles.overlay} onClick={toggleMenu}></div>}
+      {isMenuOpen && <div className="mobile-drawer-overlay" style={styles.overlay} onClick={toggleMenu}></div>}
     </>
   );
 }
@@ -122,7 +125,6 @@ const styles = {
     background: 'none',
     border: 'none',
     cursor: 'pointer',
-    display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-end',
     gap: '6px',

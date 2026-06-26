@@ -10,10 +10,17 @@ export default function BentoAccordion() {
       id: 'discovery',
       label: 'DISCOVERY',
       icon: (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{display: 'inline-block', verticalAlign: 'middle'}}>
-          <circle cx="11" cy="11" r="8"></circle>
-          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-        </svg>
+        <img 
+          src="/assets/svgs/search.svg" 
+          alt="Discovery" 
+          style={{
+            width: '14px', 
+            height: '14px', 
+            display: 'inline-block', 
+            verticalAlign: 'middle',
+            filter: 'invert(1)'
+          }} 
+        />
       ),
       title: 'Automatic resource discovery',
       desc: 'Discover and scan data endpoints, schemas, and API documentation automatically to catalog your enterprise resources.',
@@ -38,11 +45,17 @@ export default function BentoAccordion() {
       id: 'analysis',
       label: 'ANALYSIS',
       icon: (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{display: 'inline-block', verticalAlign: 'middle'}}>
-          <line x1="18" y1="20" x2="18" y2="10"></line>
-          <line x1="12" y1="20" x2="12" y2="4"></line>
-          <line x1="6" y1="20" x2="6" y2="14"></line>
-        </svg>
+        <img 
+          src="/assets/svgs/chart-pie.svg" 
+          alt="Analysis" 
+          style={{
+            width: '14px', 
+            height: '14px', 
+            display: 'inline-block', 
+            verticalAlign: 'middle',
+            filter: 'invert(1)'
+          }} 
+        />
       ),
       title: 'Evaluate agent performance with surgical precision.',
       desc: 'Get real-time scoring on accuracy, safety, and contextual relevance.',
@@ -59,9 +72,18 @@ export default function BentoAccordion() {
             <div style={styles.scoreTitle}>Your score</div>
             <div style={styles.stars}>
               {[...Array(5)].map((_, i) => (
-                <svg key={i} width="12" height="12" viewBox="0 0 24 24" fill="var(--color-forsythia)" stroke="none" style={{display: 'inline-block', marginRight: '2px'}}>
-                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-                </svg>
+                <img 
+                  key={i} 
+                  src="/assets/svgs/cube-16-solid.svg" 
+                  alt="Star" 
+                  style={{
+                    width: '12px', 
+                    height: '12px', 
+                    display: 'inline-block', 
+                    marginRight: '4px',
+                    filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'
+                  }} 
+                />
               ))}
             </div>
           </div>
@@ -90,9 +112,17 @@ export default function BentoAccordion() {
       id: 'training',
       label: 'TRAINING',
       icon: (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{display: 'inline-block', verticalAlign: 'middle'}}>
-          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
-        </svg>
+        <img 
+          src="/assets/svgs/arrow-trending-up.svg" 
+          alt="Training" 
+          style={{
+            width: '14px', 
+            height: '14px', 
+            display: 'inline-block', 
+            verticalAlign: 'middle',
+            filter: 'invert(1)'
+          }} 
+        />
       ),
       title: 'Continuous training adapters',
       desc: 'Train custom models and adapters on validated agent interaction datasets to continuously improve accuracy.',
@@ -121,9 +151,17 @@ export default function BentoAccordion() {
       id: 'deploy',
       label: 'DEPLOY',
       icon: (
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{display: 'inline-block', verticalAlign: 'middle'}}>
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
+        <img 
+          src="/assets/svgs/link-solid.svg" 
+          alt="Deploy" 
+          style={{
+            width: '14px', 
+            height: '14px', 
+            display: 'inline-block', 
+            verticalAlign: 'middle',
+            filter: 'invert(1)'
+          }} 
+        />
       ),
       title: 'One-click cluster deployment',
       desc: 'Package and deploy your agent containers to scalable edge environments or integrate directly into messaging clients.',
@@ -238,7 +276,7 @@ export default function BentoAccordion() {
                 <div 
                   className="accordion-content"
                   style={{
-                    maxHeight: activeIndex === idx ? '560px' : '0',
+                    maxHeight: activeIndex === idx ? '800px' : '0',
                     opacity: activeIndex === idx ? 1 : 0
                   }}
                 >
@@ -487,7 +525,7 @@ const styles = {
   matrixItem: {
     flex: '1',
     aspectRatio: '1',
-    backgroundColor: 'rgba(35, 62, 77, 0.3)',
+    backgroundColor: 'rgba(17, 76, 90, 0.3)',
     border: '1px solid rgba(241, 246, 244, 0.06)',
     borderRadius: '4px',
     display: 'flex',

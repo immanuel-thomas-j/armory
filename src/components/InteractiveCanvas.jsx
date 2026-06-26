@@ -6,40 +6,64 @@ export default function InteractiveCanvas() {
       title: 'Infinite Visual Canvas',
       desc: 'Map out multi-step agent behaviors on a high-precision grid. Drag and drop triggers, logic gates, and actions to craft custom paths.',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-        </svg>
+        <img 
+          src="/assets/svgs/cube-16-solid.svg" 
+          alt="Canvas" 
+          style={{
+            width: '20px', 
+            height: '20px', 
+            display: 'block',
+            filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'
+          }} 
+        />
       )
     },
     {
       title: 'Autonomous Execution',
       desc: 'Run complex decision trees without manual intervention. Our engine handles conditional branching and error recovery automatically.',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <circle cx="12" cy="12" r="3"></circle>
-          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-        </svg>
+        <img 
+          src="/assets/svgs/cog-8-tooth.svg" 
+          alt="Execution" 
+          style={{
+            width: '20px', 
+            height: '20px', 
+            display: 'block',
+            filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'
+          }} 
+        />
       )
     },
     {
       title: 'End-to-End Encryption',
       desc: 'Every node and data transfer is shielded by industrial-grade security. Maintain total control over your organizational data flow.',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-          <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-        </svg>
+        <img 
+          src="/assets/svgs/link-solid.svg" 
+          alt="Encryption" 
+          style={{
+            width: '20px', 
+            height: '20px', 
+            display: 'block',
+            filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'
+          }} 
+        />
       )
     },
     {
       title: 'Production-Ready Stack',
       desc: 'Connect core business platforms and internal services through secure, ready integrations that scale with your volume.',
       icon: (
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-          <line x1="12" y1="22.08" x2="12" y2="12"></line>
-        </svg>
+        <img 
+          src="/assets/svgs/arrow-path.svg" 
+          alt="Stack" 
+          style={{
+            width: '20px', 
+            height: '20px', 
+            display: 'block',
+            filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'
+          }} 
+        />
       )
     }
   ];
@@ -71,22 +95,22 @@ export default function InteractiveCanvas() {
               <div style={styles.sectionLabel}>Stack</div>
               <div style={styles.stackGrid}>
                 <div style={styles.stackItem}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'block'}}><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M12 2v4M8 5h8"></path></svg>
+                  <img src="/assets/svgs/cube-16-solid.svg" alt="Stack 1" style={{width: '16px', height: '16px', filter: 'invert(1)'}} />
                 </div>
                 <div style={styles.stackItem}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'block'}}><polygon points="12 2 15 9 22 12 15 15 12 22 9 15 2 12 9 9"></polygon></svg>
+                  <img src="/assets/svgs/arrow-trending-up.svg" alt="Stack 2" style={{width: '16px', height: '16px', filter: 'invert(1)'}} />
                 </div>
                 <div style={styles.stackItem}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'block'}}><path d="M12 2v20M2 12h20"></path></svg>
+                  <img src="/assets/svgs/cog-8-tooth.svg" alt="Stack 3" style={{width: '16px', height: '16px', filter: 'invert(1)'}} />
                 </div>
                 <div style={styles.stackItem}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'block'}}><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="9"></line><line x1="9" y1="13" x2="15" y2="13"></line></svg>
+                  <img src="/assets/svgs/link-solid.svg" alt="Stack 4" style={{width: '16px', height: '16px', filter: 'invert(1)'}} />
                 </div>
                 <div style={styles.stackItem}>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{display: 'block'}}><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                  <img src="/assets/svgs/search.svg" alt="Stack 5" style={{width: '16px', height: '16px', filter: 'invert(1)'}} />
                 </div>
                 <div style={styles.stackItem}>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" style={{display: 'block'}}><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                  <img src="/assets/svgs/arrow-path.svg" alt="Stack 6" style={{width: '12px', height: '12px', filter: 'invert(1)'}} />
                 </div>
               </div>
             </div>
@@ -101,109 +125,107 @@ export default function InteractiveCanvas() {
             {/* Grid Line Dotted Overlay */}
             <div style={styles.canvasGrid}></div>
 
-            {/* Connecting SVG lines with glowing paths */}
-            <svg style={styles.canvasSvg}>
-              {/* Top Path */}
-              <path d="M 50 80 L 750 80" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
-              <path d="M 50 80 L 750 80" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal" />
-
-              {/* Branch Down */}
-              <path d="M 330 80 L 330 180 L 600 180" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
-              <path d="M 330 80 L 330 180 L 600 180" fill="none" stroke="var(--color-deep-saffron)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal-slow" />
-            </svg>
-
             {/* Node elements on top of paths */}
             <div style={styles.nodesContainer}>
+              {/* Connecting SVG lines — gap-only segments to avoid bleed-through on semi-transparent cards */}
+              <svg style={styles.canvasSvg}>
+                {/* Row 1 gap segments: EmailTrigger→EditFields, EditFields→AIAgent, AIAgent→Code */}
+                <path d="M 200 70 L 268 70" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
+                <path d="M 200 70 L 268 70" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal" />
+
+                <path d="M 428 70 L 496 70" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
+                <path d="M 428 70 L 496 70" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal" />
+
+                <path d="M 656 70 L 724 70" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
+                <path d="M 656 70 L 724 70" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal" />
+
+                {/* Branch Down — routes around cards: EditFields output → gap center → vertical → horizontal → Telegram input */}
+                <path d="M 428 70 L 462 70 L 462 150 L 248 150 L 248 230 L 268 230" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
+                <path d="M 428 70 L 462 70 L 462 150 L 248 150 L 248 230 L 268 230" fill="none" stroke="var(--color-deep-saffron)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal-slow" />
+
+                {/* Row 2 gap segments: Telegram→IfCondition, IfCondition→SendEmail */}
+                <path d="M 428 230 L 496 230" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
+                <path d="M 428 230 L 496 230" fill="none" stroke="var(--color-mystic-mint)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal" />
+
+                <path d="M 656 230 L 724 230" fill="none" stroke="rgba(241, 246, 244, 0.1)" strokeWidth="2" />
+                <path d="M 656 230 L 724 230" fill="none" stroke="var(--color-mystic-mint)" strokeWidth="2" strokeDasharray="10 15" className="flowing-signal" />
+              </svg>
+
               {/* Row 1 - Main Chain */}
-              <div style={styles.row}>
-                <div style={styles.node}>
-                  <div style={styles.nodeDot}></div>
-                  <span style={styles.nodeType}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '6px', display: 'inline-block', verticalAlign: 'middle'}}>
-                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                      <polyline points="22,6 12,13 2,6"></polyline>
-                    </svg>
-                    Email Trigger
-                  </span>
-                  <span style={styles.nodeDetails}>(IMAP)</span>
-                </div>
+              <div style={styles.nodeEmailTrigger}>
+                <div style={styles.nodeDot}></div>
+                <div style={styles.nodeDotRight}></div>
+                <span style={styles.nodeType}>
+                  <img src="/assets/svgs/link.svg" alt="Email" style={{width: '12px', height: '12px', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle', filter: 'invert(1)'}} />
+                  Email Trigger
+                </span>
+                <span style={styles.nodeDetails}>(IMAP)</span>
+              </div>
 
-                <div style={styles.linkBadge}>1 item</div>
+              <div style={styles.badge1}>1 item</div>
 
-                <div style={styles.node}>
-                  <div style={styles.nodeDot}></div>
-                  <span style={styles.nodeType}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '6px', display: 'inline-block', verticalAlign: 'middle'}}>
-                      <path d="M12 20h9"></path>
-                      <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
-                    </svg>
-                    Edit Fields
-                  </span>
-                  <span style={styles.nodeDetails}>Manual</span>
-                </div>
+              <div style={styles.nodeEditFields}>
+                <div style={styles.nodeDot}></div>
+                <div style={styles.nodeDotRight}></div>
+                <span style={styles.nodeType}>
+                  <img src="/assets/svgs/cog-8-tooth.svg" alt="Edit" style={{width: '12px', height: '12px', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle', filter: 'invert(1)'}} />
+                  Edit Fields
+                </span>
+                <span style={styles.nodeDetails}>Manual</span>
+              </div>
 
-                <div style={styles.linkBadge}>1 item</div>
+              <div style={styles.badge2}>1 item</div>
 
-                <div style={{...styles.node, borderColor: 'var(--color-forsythia)'}}>
-                  <div style={{...styles.nodeDot, backgroundColor: 'var(--color-forsythia)'}}></div>
-                  <span style={{...styles.nodeType, color: 'var(--color-forsythia)'}}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" style={{marginRight: '6px', display: 'inline-block', verticalAlign: 'middle'}}>
-                      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-                    </svg>
-                    AI Agent
-                  </span>
-                  <span style={styles.nodeDetails}>Tools Agent</span>
-                </div>
+              <div style={styles.nodeAiAgent}>
+                <div style={{...styles.nodeDot, backgroundColor: 'var(--color-forsythia)'}}></div>
+                <div style={{...styles.nodeDotRight, backgroundColor: 'var(--color-forsythia)'}}></div>
+                <span style={{...styles.nodeType, color: 'var(--color-forsythia)'}}>
+                  <img src="/assets/svgs/cube-16-solid.svg" alt="Agent" style={{width: '12px', height: '12px', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle', filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'}} />
+                  AI Agent
+                </span>
+                <span style={styles.nodeDetails}>Tools Agent</span>
+              </div>
 
-                <div style={styles.linkBadge}>1 item</div>
+              <div style={styles.badge3}>1 item</div>
 
-                <div style={styles.node}>
-                  <div style={styles.nodeDot}></div>
-                  <span style={styles.nodeType}>&lt;/&gt; Code</span>
-                  <span style={styles.nodeDetails}>Javascript</span>
-                </div>
+              <div style={styles.nodeCode}>
+                <div style={styles.nodeDot}></div>
+                <span style={styles.nodeType}>&lt;/&gt; Code</span>
+                <span style={styles.nodeDetails}>Javascript</span>
               </div>
 
               {/* Row 2 - Branch Chain */}
-              <div style={{...styles.row, marginTop: '50px', paddingLeft: '320px'}}>
-                <div style={styles.node}>
-                  <div style={styles.nodeDot}></div>
-                  <span style={styles.nodeType}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '6px', display: 'inline-block', verticalAlign: 'middle'}}>
-                      <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                    Telegram
-                  </span>
-                  <span style={styles.nodeDetails}>sendAndWait</span>
-                </div>
+              <div style={styles.nodeTelegram}>
+                <div style={styles.nodeDot}></div>
+                <div style={styles.nodeDotRight}></div>
+                <span style={styles.nodeType}>
+                  <img src="/assets/svgs/link-solid.svg" alt="Telegram" style={{width: '12px', height: '12px', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle', filter: 'invert(1)'}} />
+                  Telegram
+                </span>
+                <span style={styles.nodeDetails}>sendAndWait</span>
+              </div>
 
-                <div style={styles.linkBadge}>-</div>
+              <div style={styles.badge4}>-</div>
 
-                <div style={styles.node}>
-                  <div style={styles.nodeDot}></div>
-                  <span style={styles.nodeType}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '6px', display: 'inline-block', verticalAlign: 'middle'}}>
-                      <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                      <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                    </svg>
-                    If Condition
-                  </span>
-                  <span style={styles.nodeDetails}>Branching</span>
-                </div>
+              <div style={styles.nodeIfCondition}>
+                <div style={styles.nodeDot}></div>
+                <div style={styles.nodeDotRight}></div>
+                <span style={styles.nodeType}>
+                  <img src="/assets/svgs/search.svg" alt="If" style={{width: '12px', height: '12px', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle', filter: 'invert(1)'}} />
+                  If Condition
+                </span>
+                <span style={styles.nodeDetails}>Branching</span>
+              </div>
 
-                <div style={styles.linkBadge}>1 item</div>
+              <div style={styles.badge5}>1 item</div>
 
-                <div style={styles.node}>
-                  <div style={styles.nodeDot}></div>
-                  <span style={styles.nodeType}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{marginRight: '6px', display: 'inline-block', verticalAlign: 'middle'}}>
-                      <line x1="22" y1="2" x2="11" y2="13"></line>
-                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                    </svg>
-                    Send Email
-                  </span>
-                  <span style={styles.nodeDetails}>SMTP</span>
-                </div>
+              <div style={styles.nodeSendEmail}>
+                <div style={styles.nodeDot}></div>
+                <span style={styles.nodeType}>
+                  <img src="/assets/svgs/arrow-trending-up.svg" alt="Send" style={{width: '12px', height: '12px', marginRight: '6px', display: 'inline-block', verticalAlign: 'middle', filter: 'invert(1)'}} />
+                  Send Email
+                </span>
+                <span style={styles.nodeDetails}>SMTP</span>
               </div>
             </div>
           </div>
@@ -377,18 +399,17 @@ const styles = {
   },
   nodesContainer: {
     position: 'relative',
-    zIndex: 2,
-    display: 'flex',
-    flexDirection: 'column',
-    width: '100%',
-    padding: '40px',
+    zIndex: 3,
+    width: '900px',
+    height: '320px',
+    margin: '0 auto',
   },
-  row: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '16px',
-  },
-  node: {
+  nodeEmailTrigger: {
+    position: 'absolute',
+    left: '40px',
+    top: '40px',
+    width: '160px',
+    height: '60px',
     backgroundColor: 'rgba(17, 76, 90, 0.3)',
     border: '1px solid rgba(241, 246, 244, 0.1)',
     borderRadius: '6px',
@@ -396,9 +417,97 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'flex-start',
-    minWidth: '140px',
     boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
-    position: 'relative',
+  },
+  nodeEditFields: {
+    position: 'absolute',
+    left: '268px',
+    top: '40px',
+    width: '160px',
+    height: '60px',
+    backgroundColor: 'rgba(17, 76, 90, 0.3)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '6px',
+    padding: '12px 18px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+  },
+  nodeAiAgent: {
+    position: 'absolute',
+    left: '496px',
+    top: '40px',
+    width: '160px',
+    height: '60px',
+    backgroundColor: 'rgba(17, 76, 90, 0.3)',
+    border: '2px solid var(--color-forsythia)',
+    borderRadius: '6px',
+    padding: '12px 18px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    boxShadow: '0 4px 12px rgba(255, 200, 1, 0.05)',
+  },
+  nodeCode: {
+    position: 'absolute',
+    left: '724px',
+    top: '40px',
+    width: '136px',
+    height: '60px',
+    backgroundColor: 'rgba(17, 76, 90, 0.3)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '6px',
+    padding: '12px 18px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+  },
+  nodeTelegram: {
+    position: 'absolute',
+    left: '268px',
+    top: '200px',
+    width: '160px',
+    height: '60px',
+    backgroundColor: 'rgba(17, 76, 90, 0.3)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '6px',
+    padding: '12px 18px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+  },
+  nodeIfCondition: {
+    position: 'absolute',
+    left: '496px',
+    top: '200px',
+    width: '160px',
+    height: '60px',
+    backgroundColor: 'rgba(17, 76, 90, 0.3)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '6px',
+    padding: '12px 18px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
+  },
+  nodeSendEmail: {
+    position: 'absolute',
+    left: '724px',
+    top: '200px',
+    width: '136px',
+    height: '60px',
+    backgroundColor: 'rgba(17, 76, 90, 0.3)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '6px',
+    padding: '12px 18px',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    boxShadow: '0 4px 12px rgba(0,0,0,0.3)',
   },
   nodeDot: {
     position: 'absolute',
@@ -408,6 +517,17 @@ const styles = {
     backgroundColor: 'var(--color-nocturnal-expedition)',
     top: '50%',
     left: '-5px',
+    transform: 'translateY(-50%)',
+    border: '1px solid var(--color-oceanic-noir)',
+  },
+  nodeDotRight: {
+    position: 'absolute',
+    width: '8px',
+    height: '8px',
+    borderRadius: '50%',
+    backgroundColor: 'var(--color-nocturnal-expedition)',
+    top: '50%',
+    right: '-5px',
     transform: 'translateY(-50%)',
     border: '1px solid var(--color-oceanic-noir)',
   },
@@ -422,15 +542,90 @@ const styles = {
     fontFamily: 'var(--font-mono)',
     color: 'var(--text-muted)',
   },
-  linkBadge: {
+  badge1: {
+    position: 'absolute',
+    left: '212px',
+    top: '56px',
+    width: '44px',
+    height: '28px',
     fontSize: '10px',
     fontFamily: 'var(--font-mono)',
     background: 'rgba(23, 43, 54, 0.8)',
     border: '1px solid rgba(241, 246, 244, 0.1)',
-    padding: '4px 8px',
     borderRadius: '100px',
     color: 'var(--text-muted)',
     zIndex: 3,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  badge2: {
+    position: 'absolute',
+    left: '440px',
+    top: '56px',
+    width: '44px',
+    height: '28px',
+    fontSize: '10px',
+    fontFamily: 'var(--font-mono)',
+    background: 'rgba(23, 43, 54, 0.8)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '100px',
+    color: 'var(--text-muted)',
+    zIndex: 3,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  badge3: {
+    position: 'absolute',
+    left: '668px',
+    top: '56px',
+    width: '44px',
+    height: '28px',
+    fontSize: '10px',
+    fontFamily: 'var(--font-mono)',
+    background: 'rgba(23, 43, 54, 0.8)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '100px',
+    color: 'var(--text-muted)',
+    zIndex: 3,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  badge4: {
+    position: 'absolute',
+    left: '440px',
+    top: '216px',
+    width: '44px',
+    height: '28px',
+    fontSize: '10px',
+    fontFamily: 'var(--font-mono)',
+    background: 'rgba(23, 43, 54, 0.8)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '100px',
+    color: 'var(--text-muted)',
+    zIndex: 3,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  badge5: {
+    position: 'absolute',
+    left: '668px',
+    top: '216px',
+    width: '44px',
+    height: '28px',
+    fontSize: '10px',
+    fontFamily: 'var(--font-mono)',
+    background: 'rgba(23, 43, 54, 0.8)',
+    border: '1px solid rgba(241, 246, 244, 0.1)',
+    borderRadius: '100px',
+    color: 'var(--text-muted)',
+    zIndex: 3,
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   grid: {
     marginTop: '40px',

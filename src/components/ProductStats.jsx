@@ -67,10 +67,7 @@ export default function ProductStats() {
           <div className="card-premium" style={styles.card}>
             <div style={styles.cardHeader}>
               <span style={styles.cardIcon}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-                  <circle cx="12" cy="12" r="3"></circle>
-                  <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                </svg>
+                <img src="/assets/svgs/cog-8-tooth.svg" alt="System" style={{width: '24px', height: '24px', display: 'block', filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'}} />
               </span>
               <div>
                 <h3 style={styles.cardTitle}>System Load</h3>
@@ -119,11 +116,7 @@ export default function ProductStats() {
           <div className="card-premium" style={styles.card}>
             <div style={styles.cardHeader}>
               <span style={styles.cardIcon}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-                  <line x1="18" y1="20" x2="18" y2="10"></line>
-                  <line x1="12" y1="20" x2="12" y2="4"></line>
-                  <line x1="6" y1="20" x2="6" y2="14"></line>
-                </svg>
+                <img src="/assets/svgs/chart-pie.svg" alt="SLA" style={{width: '24px', height: '24px', display: 'block', filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'}} />
               </span>
               <div>
                 <h3 style={styles.cardTitle}>SLA Response</h3>
@@ -186,10 +179,7 @@ export default function ProductStats() {
           <div className="card-premium" style={styles.card}>
             <div style={styles.cardHeader}>
               <span style={styles.cardIcon}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-                  <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96-.44 2.5 2.5 0 0 1 0-3.12 3 3 0 0 1 0-4.88 2.5 2.5 0 0 1 0-3.12A2.5 2.5 0 0 1 9.5 2z"></path>
-                  <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96-.44 2.5 2.5 0 0 0 0-3.12 3 3 0 0 0 0-4.88 2.5 2.5 0 0 0 0-3.12A2.5 2.5 0 0 0 14.5 2z"></path>
-                </svg>
+                <img src="/assets/svgs/cube-16-solid.svg" alt="Token" style={{width: '24px', height: '24px', display: 'block', filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'}} />
               </span>
               <div>
                 <h3 style={styles.cardTitle}>Token Usage</h3>
@@ -248,10 +238,7 @@ export default function ProductStats() {
             <div>
               <div style={styles.cardHeader}>
                 <span style={styles.cardIcon}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-forsythia)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{display: 'block'}}>
-                    <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                    <polyline points="16 7 22 7 22 13"></polyline>
-                  </svg>
+                  <img src="/assets/svgs/arrow-trending-up.svg" alt="Growth" style={{width: '24px', height: '24px', display: 'block', filter: 'invert(82%) sepia(61%) saturate(2461%) hue-rotate(359deg) brightness(102%) contrast(105%)'}} />
                 </span>
                 <div>
                   <h3 style={styles.cardTitle}>Growth Vector</h3>
@@ -378,6 +365,7 @@ const styles = {
     margin: '24px auto',
   },
   gaugeNum: {
+    fontFamily: 'var(--font-mono)',
     fontSize: '28px',
     fontWeight: '700',
     color: 'var(--color-arctic-powder)',
@@ -403,6 +391,7 @@ const styles = {
     alignItems: 'center',
   },
   statVal: {
+    fontFamily: 'var(--font-mono)',
     fontSize: '18px',
     fontWeight: '700',
     color: 'var(--color-arctic-powder)',
