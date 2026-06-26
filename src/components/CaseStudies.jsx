@@ -55,7 +55,7 @@ export default function CaseStudies() {
         {/* Projects Table List */}
         <div className="case-study-table">
           {projects.map((project, idx) => (
-            <div key={idx} className="case-study-row">
+            <div key={idx} className="case-study-row scroll-reveal">
               {/* Logo Column */}
               <div className="case-study-logo-cell">
                 <div className={`case-study-logo-wrapper ${project.logoClass}`}>

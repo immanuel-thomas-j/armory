@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import NeuralEngines from './components/NeuralEngines';
@@ -14,6 +14,37 @@ import Footer from './components/Footer';
 import './App.css';
 
 export default function App() {
+  useEffect(() => {
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px -10% 0px -10%', // Small inset margin to feel natural
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          // Once revealed, stop observing this element
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+    revealElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      revealElements.forEach((el) => {
+        try {
+          observer.unobserve(el);
+        } catch {
+          // ignore
+        }
+      });
+    };
+  }, []);
+
   return (
     <div className="app-container">
       {/* Header Navigation */}
@@ -57,3 +88,4 @@ export default function App() {
     </div>
   );
 }
+

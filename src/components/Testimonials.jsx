@@ -46,7 +46,7 @@ export default function Testimonials() {
     <section id="testimonials" style={styles.section}>
       <div className="container">
         {/* Header */}
-        <div style={styles.header}>
+        <div style={styles.header} className="scroll-reveal">
           <div className="badge badge-dark" style={styles.badge}>\\\\\\ TESTIMONIALS</div>
           <h2 style={styles.title}>Trusted by the pioneers</h2>
           <p style={styles.subtitle}>
@@ -55,7 +55,7 @@ export default function Testimonials() {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid-4" style={styles.grid}>
+        <div className="grid-4 scroll-reveal" style={styles.grid}>
           {reviews.map((review, idx) => (
             <div key={idx} style={styles.card} className="testimonial-card">
               {/* Vertical Label */}

@@ -72,7 +72,7 @@ export default function InteractiveCanvas() {
     <section id="canvas" style={styles.section}>
       <div className="container">
         {/* Intro */}
-        <div style={styles.header}>
+        <div style={styles.header} className="scroll-reveal">
           <div className="badge" style={{ color: 'var(--color-forsythia)', borderColor: 'rgba(255, 200, 1, 0.3)' }}>
             Workflow Editor
           </div>
@@ -83,7 +83,7 @@ export default function InteractiveCanvas() {
         </div>
 
         {/* Node Editor Visual Canvas Container */}
-        <div className="canvas-container-layout">
+        <div className="canvas-container-layout scroll-reveal">
           {/* Sidebar */}
           <div className="canvas-sidebar">
             <div style={styles.sidebarHeader}>

@@ -68,7 +68,7 @@ export default function Integrations() {
     <section id="integrations" style={styles.section}>
       <div className="container">
         {/* Intro */}
-        <div style={styles.header}>
+        <div style={styles.header} className="scroll-reveal">
           <div className="font-mono" style={styles.category}>\\\\\\ INTEGRATIONS</div>
           <h2 style={styles.title}>
             Armory bridges the gap between your data and your tools.
@@ -79,7 +79,7 @@ export default function Integrations() {
         </div>
 
         {/* Tools Grid */}
-        <div className="grid-4" style={styles.grid}>
+        <div className="grid-4 scroll-reveal" style={styles.grid}>
           {tools.map((tool, idx) => (
             <div key={idx} className="card-premium" style={styles.card}>
               <div style={styles.cardHeader}>

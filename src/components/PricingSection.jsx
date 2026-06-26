@@ -168,7 +168,7 @@ export default function PricingSection() {
     <section id="pricing" style={styles.section}>
       <div className="container">
         {/* Header */}
-        <div style={styles.header}>
+        <div style={styles.header} className="scroll-reveal">
           <div className="badge" style={{ color: 'var(--color-forsythia)', borderColor: 'rgba(255, 200, 1, 0.3)' }}>
             Transparent Pricing
           </div>
@@ -179,7 +179,7 @@ export default function PricingSection() {
         </div>
 
         {/* Isolated Switchers */}
-        <div className="pricing-controls" style={styles.controls}>
+        <div className="pricing-controls scroll-reveal" style={styles.controls}>
           {/* Billing Switcher */}
           <div className="billing-toggle-group" style={styles.toggleGroup}>
             <button 
@@ -223,7 +223,7 @@ export default function PricingSection() {
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="pricing-grid" style={styles.grid}>
+        <div className="pricing-grid scroll-reveal" style={styles.grid}>
           {/* Tier 1: Starter */}
           <div className="pricing-card" style={styles.card}>
             <div style={styles.tierName}>Starter</div>

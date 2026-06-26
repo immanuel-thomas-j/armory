@@ -202,7 +202,7 @@ export default function BentoAccordion() {
     <section id="features" style={styles.section}>
       <div className="container">
         {/* Header */}
-        <div style={styles.header}>
+        <div style={styles.header} className="scroll-reveal">
           <div className="font-mono" style={styles.category}>\\\\\\ PRODUCT FEATURES</div>
           <h2 style={styles.title}>Engineered for autonomy</h2>
           <p style={styles.subtitle}>
@@ -212,7 +212,7 @@ export default function BentoAccordion() {
 
         {/* Desktop Bento Tabs View */}
         {!isMobile && (
-          <>
+          <div className="scroll-reveal">
             <div className="bento-tabs-header">
               {tabs.map((tab, idx) => (
                 <button
@@ -247,7 +247,7 @@ export default function BentoAccordion() {
                 )}
               </div>
             </div>
-          </>
+          </div>
         )}
 
         {/* Mobile Accordion View with Context Lock State Persistence */}

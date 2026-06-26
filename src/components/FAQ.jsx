@@ -42,7 +42,7 @@ export default function FAQ() {
 
   return (
     <section id="faq" style={styles.section}>
-      <div className="container faq-container-layout">
+      <div className="container faq-container-layout scroll-reveal">
         {/* Left Column - Intro details */}
         <div className="faq-left-col">
           <div className="badge badge-dark" style={styles.badge}>\\\\\\ FAQ</div>

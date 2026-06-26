@@ -53,7 +53,7 @@ export default function ProductStats() {
     <section id="stats" style={styles.section}>
       <div className="container">
         {/* Header */}
-        <div style={styles.header}>
+        <div style={styles.header} className="scroll-reveal">
           <div className="font-mono" style={styles.category}>\\\\\\ PRODUCT STATISTICS</div>
           <h2 style={styles.title}>Optimized for performance</h2>
           <p style={styles.subtitle}>
@@ -62,7 +62,7 @@ export default function ProductStats() {
         </div>
 
         {/* Telemetry Widgets Grid */}
-        <div className="grid-3" style={styles.grid}>
+        <div className="grid-3 scroll-reveal" style={styles.grid}>
           {/* Card 1: System Load */}
           <div className="card-premium" style={styles.card}>
             <div style={styles.cardHeader}>
