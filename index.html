@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/svgs/cube-16-solid.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Armory - Next-Gen AI Data & Workflow Automation Platform</title>
+    <meta name="title" content="Armory - Next-Gen AI Data & Workflow Automation Platform" />
+    <meta name="description" content="Deploy custom enterprise agents and automate complex workflows. Scale your intelligence with Armory, the advanced AI-driven data automation platform." />
+    <meta name="keywords" content="AI, data automation, workflow automation, enterprise agents, machine learning, neural systems, SLA" />
+    <meta name="author" content="Armory AI" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://armory.ai/" />
+    <meta property="og:title" content="Armory - Next-Gen AI Platform" />
+    <meta property="og:description" content="Deploy custom enterprise agents and automate complex workflows. Scale your intelligence with Armory." />
+    <meta property="og:image" content="/assets/video/demo.mp4" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://armory.ai/" />
+    <meta property="twitter:title" content="Armory - Next-Gen AI Platform" />
+    <meta property="twitter:description" content="Deploy custom enterprise agents and automate complex workflows. Scale your intelligence with Armory." />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Premium Loader Overlay -->
+    <div id="loader-overlay" style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: #172B36; z-index: 99999; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: opacity 0.2s ease-out; opacity: 1;">
+      <!-- Glowing Loader Bar -->
+      <div style="width: 200px; height: 2px; background-color: rgba(241, 246, 244, 0.05); border-radius: 10px; overflow: hidden; position: relative;">
+        <div id="loader-progress" style="position: absolute; left: 0; top: 0; height: 100%; width: 0%; background-color: #FFC801; transition: width 0.15s cubic-bezier(0.1, 0.8, 0.3, 1); box-shadow: 0 0 10px #FFC801;"></div>
+      </div>
+      <div style="margin-top: 16px; font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #F1F6F4; letter-spacing: 0.2em; opacity: 0.6;">ARMORY_BOOTING</div>
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Loader Control Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const progress = document.getElementById('loader-progress');
+        const overlay = document.getElementById('loader-overlay');
+        
+        // Step 1: Animate progress bar to 100% instantly
+        setTimeout(() => {
+          if (progress) progress.style.width = '100%';
+        }, 10);
+
+        // Step 2: Fade out loader overlay at 160ms (well under 500ms cap)
+        setTimeout(() => {
+          if (overlay) {
+            overlay.style.opacity = '0';
+            setTimeout(() => {
+              overlay.style.display = 'none';
+            }, 200);
+          }
+        }, 160);
+      });
+    </script>
+  </body>
+</html>
+
